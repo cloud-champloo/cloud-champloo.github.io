@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {'packages':['annotatedtimeline']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', 'イベント登録');
+        data.addColumn('string', 'title1');
+        data.addColumn('string', 'text1');
+        data.addRows([
+          [new Date(2014, 3 ,18), 3, undefined, undefined],
+          [new Date(2014, 3 ,19), 2, undefined, undefined],
+          [new Date(2014, 3 ,20), 2, undefined, undefined],
+          [new Date(2014, 3 ,21), 1, undefined, undefined],
+          [new Date(2014, 3 ,22), 0, undefined, undefined],
+          [new Date(2014, 3 ,23), 0, undefined, undefined],
+          [new Date(2014, 3 ,24), 2, undefined, undefined],
+          [new Date(2014, 3 ,25), 0, undefined, undefined],
+          [new Date(2014, 3 ,26), 0, undefined, undefined],
+          [new Date(2014, 3 ,27), 0, undefined, undefined],
+          [new Date(2014, 3 ,28), 0, undefined, undefined],
+          [new Date(2014, 3 ,29), 0, undefined, undefined],
+          [new Date(2014, 3 ,30), 0, undefined, undefined],
+          [new Date(2014, 3 ,31), 0, undefined, undefined],
+          [new Date(2014, 4 , 1), 0, undefined, undefined],
+          [new Date(2014, 4 , 2), 0, undefined, undefined],
+          [new Date(2014, 4 , 3), 0, undefined, undefined],
+          [new Date(2014, 4 , 4), 0, undefined, undefined],
+          [new Date(2014, 4 , 5), 0, undefined, undefined],
+          [new Date(2014, 4 , 6), 1, undefined, undefined],
+          [new Date(2014, 4 , 7), 1, undefined, undefined],
+          [new Date(2014, 4 , 8), 0, undefined, undefined],
+          [new Date(2014, 4 , 9), 1, undefined, undefined],
+          [new Date(2014, 4 ,10), 2, undefined, undefined],
+          [new Date(2014, 4 ,11), 0, undefined, undefined],
+          [new Date(2014, 4 ,12), 0, undefined, undefined],
+          [new Date(2014, 4 ,13), 2, undefined, undefined],
+          [new Date(2014, 4 ,14), 0, undefined, undefined],
+          [new Date(2014, 4 ,15), 5, undefined, undefined],
+          [new Date(2014, 4 ,16),12, 'メール投げ込み', 'レキサスさん'],
+          [new Date(2014, 4 ,17),18, undefined, undefined],
+          [new Date(2014, 4 ,18), 8, undefined, undefined],
+          [new Date(2014, 4 ,19),10, '地元紙掲載', '沖縄タイムスさん']
+        ]);
+
+        var chart = new google.visualization.AnnotatedTimeLine(document.getElementById('chart_div'));
+        chart.draw(data, {displayAnnotations: true});
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id='chart_div' style='width: 700px; height: 240px;'></div>
+
+  </body>
+</html>
